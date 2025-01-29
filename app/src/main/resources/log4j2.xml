@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="OFF">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <Layout class="org.apache.logging.log4j.layout.PatternLayout">
+                <Pattern>%d{ISO8601} [%t] %-5level: %msg%n%throwable</Pattern>
+            </Layout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="off">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <Logger name="org.apache.spark" level="off" />
+        <Logger name="org.apache.hadoop" level="off" />
+    </Loggers>
+</Configuration>
